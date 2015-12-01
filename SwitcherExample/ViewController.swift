@@ -37,7 +37,6 @@ class ViewController: UIViewController, SwitcherChangeValueDelegate {
     
     func switcherDidChangeValue(value: Bool) {
         if value {
-            print("Yes")
         }
     }
 }
