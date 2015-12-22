@@ -48,13 +48,7 @@ class Switcher: UIView {
     }
     
     @IBAction func switcherButtonDidTouch(sender: AnyObject) {
-        if status {
-
-            animationSwitcherButton(status)
-        } else {
-
-            animationSwitcherButton(status)
-        }
+        animationSwitcherButton(status)
         status = !status;
         delegate?.switcherDidChangeValue(status)
     }
