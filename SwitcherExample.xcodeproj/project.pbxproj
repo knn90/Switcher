@@ -12,8 +12,8 @@
 		D6BDB39E1BE768030009E292 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6BDB39C1BE768030009E292 /* Main.storyboard */; };
 		D6BDB3A01BE768030009E292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6BDB39F1BE768030009E292 /* Assets.xcassets */; };
 		D6BDB3A31BE768030009E292 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6BDB3A11BE768030009E292 /* LaunchScreen.storyboard */; };
-		D6BDB3AF1BE771830009E292 /* Switcher.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6BDB3AE1BE771830009E292 /* Switcher.xib */; settings = {ASSET_TAGS = (); }; };
-		D6BDB3B11BE772360009E292 /* Switcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BDB3B01BE772360009E292 /* Switcher.swift */; settings = {ASSET_TAGS = (); }; };
+		D6BDB3AF1BE771830009E292 /* KNSwitcher.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6BDB3AE1BE771830009E292 /* KNSwitcher.xib */; };
+		D6BDB3B11BE772360009E292 /* KNSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BDB3B01BE772360009E292 /* KNSwitcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +24,8 @@
 		D6BDB39F1BE768030009E292 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6BDB3A21BE768030009E292 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6BDB3A41BE768030009E292 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6BDB3AE1BE771830009E292 /* Switcher.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Switcher.xib; sourceTree = "<group>"; };
-		D6BDB3B01BE772360009E292 /* Switcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Switcher.swift; path = ../Switcher.swift; sourceTree = "<group>"; };
+		D6BDB3AE1BE771830009E292 /* KNSwitcher.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KNSwitcher.xib; sourceTree = "<group>"; };
+		D6BDB3B01BE772360009E292 /* KNSwitcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KNSwitcher.swift; path = ../KNSwitcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +64,8 @@
 				D6BDB39F1BE768030009E292 /* Assets.xcassets */,
 				D6BDB3A11BE768030009E292 /* LaunchScreen.storyboard */,
 				D6BDB3A41BE768030009E292 /* Info.plist */,
-				D6BDB3AE1BE771830009E292 /* Switcher.xib */,
-				D6BDB3B01BE772360009E292 /* Switcher.swift */,
+				D6BDB3AE1BE771830009E292 /* KNSwitcher.xib */,
+				D6BDB3B01BE772360009E292 /* KNSwitcher.swift */,
 			);
 			path = SwitcherExample;
 			sourceTree = "<group>";
@@ -96,11 +96,12 @@
 		D6BDB38D1BE768020009E292 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Khoi Nguyen Nguyen";
 				TargetAttributes = {
 					D6BDB3941BE768020009E292 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -129,7 +130,7 @@
 			files = (
 				D6BDB3A31BE768030009E292 /* LaunchScreen.storyboard in Resources */,
 				D6BDB3A01BE768030009E292 /* Assets.xcassets in Resources */,
-				D6BDB3AF1BE771830009E292 /* Switcher.xib in Resources */,
+				D6BDB3AF1BE771830009E292 /* KNSwitcher.xib in Resources */,
 				D6BDB39E1BE768030009E292 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,7 +144,7 @@
 			files = (
 				D6BDB39B1BE768030009E292 /* ViewController.swift in Sources */,
 				D6BDB3991BE768030009E292 /* AppDelegate.swift in Sources */,
-				D6BDB3B11BE772360009E292 /* Switcher.swift in Sources */,
+				D6BDB3B11BE772360009E292 /* KNSwitcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,8 +183,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -226,8 +229,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -246,6 +251,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -258,6 +264,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.asiantech.dev.SwitcherExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -269,6 +276,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.asiantech.dev.SwitcherExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -291,6 +299,7 @@
 				D6BDB3A91BE768030009E292 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

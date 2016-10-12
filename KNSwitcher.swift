@@ -12,7 +12,7 @@ protocol SwitcherChangeValueDelegate {
     func switcherDidChangeValue(value:Bool)
 }
 
-class Switcher: UIView {
+class KNSwitcher: UIView {
 
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var leftSpace: NSLayoutConstraint!
@@ -24,20 +24,34 @@ class Switcher: UIView {
     private var originPosition:CGFloat = 0.0
     private var finalPosition:CGFloat = 0.0
     
-    override func awakeFromNib() {
+    
+    private var view: UIView!
+    
+    func xibSetup() {
+        view = loadViewFromNib()
+        view.frame = bounds
+        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
+        addSubview(view)
+    }
+    
+    override init(frame: CGRect) {
+        
+        super.init(frame: frame)
+        xibSetup()
         setUpUI()
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     func setUpUI() {
-        button.setImage(UIImage(named: "Delete"), forState: UIControlState.Normal)
+        button.setImage(UIImage(named: "Delete"), for: .normal)
+        button.setImage(UIImage(named: "Checkmark"), for: .selected)
     }
     
-    override func layoutSubviews() {
-
-    }
-    
-    override func drawRect(rect: CGRect) {
-        super.drawRect(rect)
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
         self.layer.cornerRadius = self.frame.height / 2
         self.clipsToBounds = true
         
@@ -47,17 +61,26 @@ class Switcher: UIView {
         leftSpace.constant = originPosition
     }
     
-    @IBAction func switcherButtonDidTouch(sender: AnyObject) {
-        animationSwitcherButton(status)
+    private func loadViewFromNib() -> UIView {
+        
+        let bundle = Bundle(for: type(of: self))
+        let nib = UINib(nibName: "KNSwitcher", bundle: bundle)
+        let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
+        return view
+        
+    }
+
+    @IBAction func switcherButtonTouch(_ sender: AnyObject) {
+        animationSwitcherButton(status: status)
         status = !status;
-        delegate?.switcherDidChangeValue(status)
+        delegate?.switcherDidChangeValue(value: status)
     }
     
-    func animationSwitcherButton(status:Bool) {
+    func animationSwitcherButton(status: Bool) {
         if status {
             
             // Clear Shadow
-            self.button.layer.shadowOffset = CGSizeZero
+            self.button.layer.shadowOffset = CGSize.zero
             self.button.layer.shadowOpacity = 0
             self.button.layer.shadowRadius = self.button.frame.height / 2
             self.button.layer.cornerRadius = self.button.frame.height / 2
@@ -68,11 +91,11 @@ class Switcher: UIView {
             rotateAnimation.fromValue = 0.0
             rotateAnimation.toValue = CGFloat(M_PI)
             rotateAnimation.duration = 0.5
-            rotateAnimation.cumulative = false;
-            self.button.layer.addAnimation(rotateAnimation, forKey: "rotate")
+            rotateAnimation.isCumulative = false;
+            self.button.layer.add(rotateAnimation, forKey: "rotate")
             
-            UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
-                self.button.setImage(UIImage(named: "Delete"), forState: UIControlState.Normal)
+            UIView.animate(withDuration: 0.5, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: { () -> Void in
+                self.button.isSelected = false
                 self.leftSpace.constant = self.originPosition
                 self.layoutIfNeeded()
                 self.button.backgroundColor = UIColor(red: 243/255.0, green: 229/255.0, blue: 211/255.0, alpha: 1)
@@ -87,21 +110,21 @@ class Switcher: UIView {
             rotateAnimation.fromValue = CGFloat(M_PI)
             rotateAnimation.toValue = 0.0
             rotateAnimation.duration = 0.5
-            rotateAnimation.cumulative = false;
-            self.button.layer.addAnimation(rotateAnimation, forKey: "rotate")
+            rotateAnimation.isCumulative = false;
+            self.button.layer.add(rotateAnimation, forKey: "rotate")
 
             // Translation animation
-            UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
-                self.button.setImage(UIImage(named: "Checkmark"), forState: UIControlState.Normal)
+            UIView.animate(withDuration: 0.5, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: { () -> Void in
+                self.button.isSelected = true
                 self.leftSpace.constant = self.finalPosition
                 self.layoutIfNeeded()
                 self.button.backgroundColor = UIColor(red: 126/255.0, green: 134/255.0, blue: 249/255.0, alpha: 1)
                 }, completion: { (finish:Bool) -> Void in
-                    self.button.layer.shadowOffset = CGSizeMake(0, 0.2)
+                    self.button.layer.shadowOffset = CGSize(width: 0, height: 0.2)
                     self.button.layer.shadowOpacity = 0.3
                     self.button.layer.shadowRadius = 5.0
                     self.button.layer.cornerRadius = self.button.frame.height / 2
-                    self.button.layer.shadowPath = UIBezierPath(roundedRect: self.button.layer.bounds, cornerRadius: self.button.frame.height / 2).CGPath
+                    self.button.layer.shadowPath = UIBezierPath(roundedRect: self.button.layer.bounds, cornerRadius: self.button.frame.height / 2).cgPath
             })
 
         }

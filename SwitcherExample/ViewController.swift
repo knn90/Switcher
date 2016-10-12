@@ -13,12 +13,12 @@ class ViewController: UIViewController, SwitcherChangeValueDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let view:Switcher = loadViewFromNib() as? Switcher {
-            view.frame = CGRectMake(0, 0, 160, 80)
-            view.center = self.view.center;
-            view.delegate = self;
-            self.view.addSubview(view)
-        }
+        let view = KNSwitcher()
+        view.frame = CGRect(x: 0, y: 0, width: 160, height: 80)
+        view.center = self.view.center;
+        view.delegate = self;
+        self.view.addSubview(view)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,15 +26,7 @@ class ViewController: UIViewController, SwitcherChangeValueDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func loadViewFromNib() -> UIView {
-        
-        let bundle = NSBundle(forClass: self.dynamicType)
-        let nib = UINib(nibName: "Switcher", bundle: bundle)
-        let view = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
-        
-        return view
-    }
-    
+ 
     func switcherDidChangeValue(value: Bool) {
         if value {
         }
