@@ -13,7 +13,7 @@ class ViewController: UIViewController, SwitcherChangeValueDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let view = KNSwitcher()
+        let view = KNSwitcher(status: true)
         view.frame = CGRect(x: 0, y: 0, width: 160, height: 80)
         view.center = self.view.center;
         view.delegate = self;
