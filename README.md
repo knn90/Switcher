@@ -8,7 +8,8 @@ Custom UISwitcher with animation. Thank to @andmironov for great design http://u
 ![](/Switcher.gif) 
 
 
-##Bug Found: Create issue or pull request please
+##Bug Found: 
+Create issue or pull request. Please!!!!
 
 ##License: 
 Nothing special, just do what you need to
