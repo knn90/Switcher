@@ -12,7 +12,6 @@
 		D6BDB39E1BE768030009E292 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6BDB39C1BE768030009E292 /* Main.storyboard */; };
 		D6BDB3A01BE768030009E292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6BDB39F1BE768030009E292 /* Assets.xcassets */; };
 		D6BDB3A31BE768030009E292 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6BDB3A11BE768030009E292 /* LaunchScreen.storyboard */; };
-		D6BDB3AF1BE771830009E292 /* KNSwitcher.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6BDB3AE1BE771830009E292 /* KNSwitcher.xib */; };
 		D6BDB3B11BE772360009E292 /* KNSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BDB3B01BE772360009E292 /* KNSwitcher.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +23,6 @@
 		D6BDB39F1BE768030009E292 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6BDB3A21BE768030009E292 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6BDB3A41BE768030009E292 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6BDB3AE1BE771830009E292 /* KNSwitcher.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KNSwitcher.xib; sourceTree = "<group>"; };
 		D6BDB3B01BE772360009E292 /* KNSwitcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KNSwitcher.swift; path = ../KNSwitcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +62,6 @@
 				D6BDB39F1BE768030009E292 /* Assets.xcassets */,
 				D6BDB3A11BE768030009E292 /* LaunchScreen.storyboard */,
 				D6BDB3A41BE768030009E292 /* Info.plist */,
-				D6BDB3AE1BE771830009E292 /* KNSwitcher.xib */,
 				D6BDB3B01BE772360009E292 /* KNSwitcher.swift */,
 			);
 			path = SwitcherExample;
@@ -130,7 +127,6 @@
 			files = (
 				D6BDB3A31BE768030009E292 /* LaunchScreen.storyboard in Resources */,
 				D6BDB3A01BE768030009E292 /* Assets.xcassets in Resources */,
-				D6BDB3AF1BE771830009E292 /* KNSwitcher.xib in Resources */,
 				D6BDB39E1BE768030009E292 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
