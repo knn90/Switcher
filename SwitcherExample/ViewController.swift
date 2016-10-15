@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, SwitcherChangeValueDelegate {
+class ViewController: UIViewController, KNSwitcherChangeValueDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +29,7 @@ class ViewController: UIViewController, SwitcherChangeValueDelegate {
  
     func switcherDidChangeValue(value: Bool) {
         if value {
+            
         }
     }
 }

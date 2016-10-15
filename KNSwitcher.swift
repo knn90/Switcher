@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol SwitcherChangeValueDelegate {
+protocol KNSwitcherChangeValueDelegate {
     func switcherDidChangeValue(value:Bool)
 }
 
@@ -20,7 +20,7 @@ class KNSwitcher: UIView {
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var leftSpace: NSLayoutConstraint!
     
-    var delegate: SwitcherChangeValueDelegate?
+    var delegate: KNSwitcherChangeValueDelegate?
     
     private var status:Bool = false
     
@@ -98,7 +98,7 @@ class KNSwitcher: UIView {
             
             // Rotate animation
             let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
-            rotateAnimation.fromValue = CGFloat(M_PI)
+            rotateAnimation.fromValue = -CGFloat(M_PI)
             rotateAnimation.toValue = 0.0
             rotateAnimation.duration = 0.5
             rotateAnimation.isCumulative = false;
@@ -129,7 +129,7 @@ class KNSwitcher: UIView {
             // Rotate animation
             let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
             rotateAnimation.fromValue = 0.0
-            rotateAnimation.toValue = CGFloat(M_PI)
+            rotateAnimation.toValue = -CGFloat(M_PI)
             rotateAnimation.duration = 0.5
             rotateAnimation.isCumulative = false;
             self.button.layer.add(rotateAnimation, forKey: "rotate")
