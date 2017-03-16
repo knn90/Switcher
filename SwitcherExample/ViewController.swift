@@ -13,17 +13,14 @@ class ViewController: UIViewController, KNSwitcherChangeValueDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let switcher = KNSwitcher(frame: CGRect(x: 0, y: 0, width: 200, height: 40), on: false)
+        let switcher = KNSwitcher(frame: CGRect(x: 100, y: 100, width: 200, height: 80), on: false)
+        switcher.setImages(onImage: UIImage(named: "Checkmark"), offImage: UIImage(named: "Delete"))
         self.view.addSubview(switcher)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func toggleBig(_ sender: AnyObject) {
-//        big.setOn(on: !big.on)
     }
  
     func switcherDidChangeValue(switcher:KNSwitcher, value: Bool) {

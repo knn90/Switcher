@@ -77,7 +77,7 @@ class KNSwitcher: UIView {
         button.widthAnchor.constraint(equalTo: button.heightAnchor, multiplier: 1).isActive = true
     }
     
-    func setImages(onImage:UIImage , offImage :UIImage) {
+    func setImages(onImage:UIImage? , offImage :UIImage?) {
             button.setImage(offImage, for: .normal)
             button.setImage(onImage, for: .selected)
         }   
