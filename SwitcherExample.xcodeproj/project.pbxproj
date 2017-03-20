@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E1424761E7FB0630078B9D7 /* KNSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1424751E7FB0630078B9D7 /* KNSwitcher.swift */; };
 		D6BDB3991BE768030009E292 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BDB3981BE768030009E292 /* AppDelegate.swift */; };
 		D6BDB39B1BE768030009E292 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BDB39A1BE768030009E292 /* ViewController.swift */; };
 		D6BDB39E1BE768030009E292 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6BDB39C1BE768030009E292 /* Main.storyboard */; };
 		D6BDB3A01BE768030009E292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6BDB39F1BE768030009E292 /* Assets.xcassets */; };
 		D6BDB3A31BE768030009E292 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6BDB3A11BE768030009E292 /* LaunchScreen.storyboard */; };
-		D6BDB3B11BE772360009E292 /* KNSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BDB3B01BE772360009E292 /* KNSwitcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E1424751E7FB0630078B9D7 /* KNSwitcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNSwitcher.swift; sourceTree = "<group>"; };
 		D6BDB3951BE768030009E292 /* SwitcherExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwitcherExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BDB3981BE768030009E292 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6BDB39A1BE768030009E292 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,7 +24,6 @@
 		D6BDB39F1BE768030009E292 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6BDB3A21BE768030009E292 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6BDB3A41BE768030009E292 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6BDB3B01BE772360009E292 /* KNSwitcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KNSwitcher.swift; path = ../KNSwitcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E1424741E7FB0630078B9D7 /* KNSwitcher */ = {
+			isa = PBXGroup;
+			children = (
+				7E1424751E7FB0630078B9D7 /* KNSwitcher.swift */,
+			);
+			path = KNSwitcher;
+			sourceTree = "<group>";
+		};
 		D6BDB38C1BE768020009E292 = {
 			isa = PBXGroup;
 			children = (
@@ -62,7 +70,7 @@
 				D6BDB39F1BE768030009E292 /* Assets.xcassets */,
 				D6BDB3A11BE768030009E292 /* LaunchScreen.storyboard */,
 				D6BDB3A41BE768030009E292 /* Info.plist */,
-				D6BDB3B01BE772360009E292 /* KNSwitcher.swift */,
+				7E1424741E7FB0630078B9D7 /* KNSwitcher */,
 			);
 			path = SwitcherExample;
 			sourceTree = "<group>";
@@ -139,8 +147,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6BDB39B1BE768030009E292 /* ViewController.swift in Sources */,
+				7E1424761E7FB0630078B9D7 /* KNSwitcher.swift in Sources */,
 				D6BDB3991BE768030009E292 /* AppDelegate.swift in Sources */,
-				D6BDB3B11BE772360009E292 /* KNSwitcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

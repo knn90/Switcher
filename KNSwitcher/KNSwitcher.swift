@@ -9,7 +9,7 @@
 import UIKit
 
 protocol KNSwitcherChangeValueDelegate {
-    func switcherDidChangeValue(switcher:KNSwitcher,value:Bool)
+    func switcherDidChangeValue(switcher: KNSwitcher,value: Bool)
 }
 
 class KNSwitcher: UIView {
@@ -19,10 +19,8 @@ class KNSwitcher: UIView {
     var delegate: KNSwitcherChangeValueDelegate?
     
     @IBInspectable var on: Bool = false
-    
     @IBInspectable var originalImage:UIImage?
     @IBInspectable var selectedImage:UIImage?
-    
     @IBInspectable var selectedColor:UIColor = UIColor(red: 126/255.0, green: 134/255.0, blue: 249/255.0, alpha: 1)
     @IBInspectable var originalColor:UIColor = UIColor(red: 243/255.0, green: 229/255.0, blue: 211/255.0, alpha: 1)
     
