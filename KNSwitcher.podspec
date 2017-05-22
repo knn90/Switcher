@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'KNSwitcher'
-  s.version          = '1.0'
+  s.version          = '1.0.1'
   s.summary          = 'Custom everything in Switcher with animation'
  
   s.description      = <<-DESC
