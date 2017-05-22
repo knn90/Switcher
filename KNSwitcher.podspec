@@ -12,6 +12,6 @@ Custom everything in Switcher with animation. Support using xib or code. Change 
   s.author           = { 'Khoi Nguyen' => 'nguyenkhoi2190@gmail.com' }
   s.source           = { :git => 'https://github.com/knn90/Switcher.git', :tag => s.version.to_s }
  
-  s.ios.deployment_target = '9.3'
+  s.ios.deployment_target = '9.0'
   s.source_files = 'KNSwitcher/KNSwitcher.swift'
 end
