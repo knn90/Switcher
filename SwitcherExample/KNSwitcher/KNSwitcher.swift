@@ -94,7 +94,7 @@ class KNSwitcher: UIView {
         if on == true {
             // Rotate animation
             let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
-            rotateAnimation.fromValue = -CGFloat(M_PI)
+            rotateAnimation.fromValue = -CGFloat(Double.pi)
             rotateAnimation.toValue = 0.0
             rotateAnimation.duration = 0.45
             rotateAnimation.isCumulative = false;
@@ -124,7 +124,7 @@ class KNSwitcher: UIView {
             // Rotate animation
             let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
             rotateAnimation.fromValue = 0.0
-            rotateAnimation.toValue = -CGFloat(M_PI)
+            rotateAnimation.toValue = -CGFloat(Double.pi)
             rotateAnimation.duration = 0.45
             rotateAnimation.isCumulative = false;
             self.button.layer.add(rotateAnimation, forKey: "rotate")
